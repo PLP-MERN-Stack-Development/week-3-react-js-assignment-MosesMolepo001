@@ -1,6 +1,6 @@
-import React from 'react';
-import Navbar from './Navbar';
-import Footer from './Footer';
+import React from "react";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 const Layout = ({ children }) => (
   <div className="min-h-screen bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 flex flex-col">

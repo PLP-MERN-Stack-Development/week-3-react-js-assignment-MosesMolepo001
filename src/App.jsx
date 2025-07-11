@@ -1,10 +1,9 @@
-import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import React from "react";
+import { Routes, Route } from "react-router-dom";
 
-
-import Layout from './components/Layout';
-import Home from './pages/Home';
-import APIFetchPage from './pages/APIFetchPage';
+import Layout from "./components/Layout";
+import Home from "./pages/Home";
+import APIFetchPage from "./pages/APIFetchPage";
 
 function App() {
   return (
