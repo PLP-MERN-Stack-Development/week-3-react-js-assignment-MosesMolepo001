@@ -1,71 +1,128 @@
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=19918062&assignment_repo_type=AssignmentRepo)
-# React.js and Tailwind CSS Assignment
+# 🧠 PLP Task Manager – Week 3 React Assignment
 
-This assignment focuses on building a responsive React application using JSX and Tailwind CSS, implementing component architecture, state management, hooks, and API integration.
+This is a responsive task manager app built with **React**, **Vite**, **Tailwind CSS**, and **React Router**. It includes:
 
-## Assignment Overview
+- ✅ Dark mode support with toggle
+- ✅ Responsive layout
+- ✅ Clean modern UI with Tailwind
+- ✅ Modular components (Navbar, TaskManager, Layout)
+- ✅ Routing using `react-router-dom`
 
-You will:
-1. Set up a React project with Vite and Tailwind CSS
-2. Create reusable UI components
-3. Implement state management using React hooks
-4. Integrate with external APIs
-5. Style your application using Tailwind CSS
+---
 
-## Getting Started
-
-1. Accept the GitHub Classroom assignment invitation
-2. Clone your personal repository that was created by GitHub Classroom
-3. Install dependencies:
-   ```
-   npm install
-   ```
-4. Start the development server:
-   ```
-   npm run dev
-   ```
-
-## Files Included
-
-- `Week3-Assignment.md`: Detailed assignment instructions
-- Starter files for your React application:
-  - Basic project structure
-  - Pre-configured Tailwind CSS
-  - Sample component templates
-
-## Requirements
-
-- Node.js (v18 or higher)
-- npm or yarn
-- Modern web browser
-- Code editor (VS Code recommended)
-
-## Project Structure
+## 📁 Project Structure
 
 ```
-src/
-├── components/       # Reusable UI components
-├── pages/           # Page components
-├── hooks/           # Custom React hooks
-├── context/         # React context providers
-├── api/             # API integration functions
-├── utils/           # Utility functions
-└── App.jsx          # Main application component
+week-3-react-js-assignment-MosesMolepo001/
+├── public/
+├── src/
+│   ├── components/
+│   │   ├── Navbar.jsx
+│   │   ├── TaskManager.jsx
+│   │   └── Layout.jsx
+│   ├── App.jsx
+│   ├── index.css
+│   └── main.jsx
+├── tailwind.config.js
+├── postcss.config.js
+├── index.html
+└── README.md
 ```
 
-## Submission
+---
 
-Your work will be automatically submitted when you push to your GitHub Classroom repository. Make sure to:
+## 🛠️ Installation
 
-1. Complete all required components and features
-2. Implement proper state management with hooks
-3. Integrate with at least one external API
-4. Style your application with Tailwind CSS
-5. Deploy your application and add the URL to your README.md
+Make sure you're using **Node.js 22.12.0 or higher**. Then:
 
-## Resources
+```bash
+# Install dependencies
+npm install
 
-- [React Documentation](https://react.dev/)
-- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
-- [Vite Documentation](https://vitejs.dev/guide/)
-- [React Router Documentation](https://reactrouter.com/) 
+# Start development server
+npm run dev
+```
+
+Visit: [http://localhost:5173](http://localhost:5173)
+
+---
+
+## 🌙 Dark Mode Toggle
+
+The dark mode is toggled using a button in the Navbar. It:
+
+- Stores theme preference in `localStorage`
+- Applies the `dark` class to `<html>` using Tailwind’s dark mode feature
+
+---
+
+## 💅 Tailwind CSS Setup
+
+Tailwind is configured in:
+
+### `tailwind.config.js`
+```js
+module.exports = {
+  content: ['./index.html', './src/**/*.{js,jsx}'],
+  darkMode: 'class',
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+};
+```
+
+### `postcss.config.js`
+```js
+module.exports = {
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {},
+  },
+};
+```
+
+### `index.css`
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  transition: background-color 0.3s ease;
+}
+
+body {
+  background-color: #e7e122;
+
+  color: #1a202c;
+}
+
+.dark body {
+  background-color: #1a202c;
+  color: #f7fafc;
+}
+```
+
+---
+
+## 🔗 Useful Scripts
+
+```bash
+npm run dev        # Start Vite development server
+npm run build      # Build production files
+npm run preview    # Preview production build locally
+```
+
+---
+
+## 🙌 Author
+
+**Moses Molepo**  
+Submitted for the **PLP Week 3 React Assignment**
+
+---
+
+## 📸 Screenshot
+
+located in the `pages` folder.
