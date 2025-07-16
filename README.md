@@ -43,7 +43,7 @@ npm install
 npm run dev
 ```
 
-Visit: [http://localhost:5173](http://localhost:5173)
+Visit: (https://effulgent-klepon-fea5b9.netlify.app/)
 
 ---
 
